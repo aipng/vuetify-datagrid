@@ -1,0 +1,67 @@
+/* bordered datagrid */
+.datagrid-table th {
+	border-right: 1px solid rgba(var(--v-border-color), var(--v-border-opacity));
+	border-bottom: 1px solid rgba(var(--v-border-color), var(--v-border-opacity)) !important; /* Vuetify často dává vlastní border-bottom, tak použijeme !important pro jistotu */
+}
+
+.datagrid-table td {
+	border-right: 1px solid rgba(var(--v-border-color), var(--v-border-opacity));
+	border-bottom: 1px solid rgba(var(--v-border-color), var(--v-border-opacity));
+}
+
+/*.datagrid-table table > thead > tr th:last-child,*/
+.datagrid-table td:last-child {
+	border-right: none;
+}
+
+.datagrid-table .v-table__wrapper {
+	border: 1px solid rgba(var(--v-border-color), var(--v-border-opacity));
+}
+
+.datagrid-table tbody tr:last-child td {
+	border-bottom: none;
+}
+
+/* hoverable row */
+.datagrid-table .v-data-table__tr:hover {
+	background: #ececec !important;
+}
+
+/* table header */
+.datagrid-table thead th {
+	background-color: #f5f5f5; /* Příklad světle šedé barvy */
+}
+
+.datagrid-table .v-data-table__thead > tr > th {
+	font-weight: bold !important;
+	padding: 0 !important;
+	text-align: center !important;
+	position: relative;
+}
+
+.datagrid-table .v-data-table__thead > tr > th > div {
+	width: 100%;
+	height: 100%;
+	padding: 0.5rem;
+	align-items: center;
+}
+
+.datagrid-table .v-data-table__tbody > tr > td a,
+.datagrid-table .v-data-table__tbody > tr > td a:visited {
+	text-decoration: none !important;
+	color: #0371c5 !important;
+}
+
+/* Specifický styl pro fixed-header, pokud základní nestačí */
+/* Vuetify často přidává vlastní pozadí pro fixed header, zkuste nejdřív bez !important */
+.datagrid-table.v-data-table--fixed-header > .v-table__wrapper > table > thead > tr > th {
+	background-color: #f5f5f5;
+}
+
+.datagrid-table .inactive .disabled {
+	opacity: 0.3;
+}
+
+.datagrid-table .inactive:hover .disabled {
+	opacity: 1;
+}
