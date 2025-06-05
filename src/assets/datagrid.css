@@ -23,7 +23,7 @@
 }
 
 /* hoverable row */
-.datagrid-table .v-data-table__tr:hover {
+.datagrid-table tbody tr:hover {
 	background: #ececec !important;
 }
 
