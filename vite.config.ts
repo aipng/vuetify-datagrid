@@ -12,8 +12,9 @@ export default defineConfig({
   build: {
     lib: {
       entry: path.resolve(__dirname, 'src/index.ts'),
-      name: 'AipngDatagrid',
-      fileName: 'index'
+      name: 'TheDatagrid',
+      fileName: 'index',
+      formats: ['es', 'umd']
     },
     rollupOptions: {
       external: ['vue', 'vuetify'],
@@ -24,6 +25,7 @@ export default defineConfig({
         },
         exports: 'named'
       }
-    }
+    },
+    sourcemap: true
   }
 })
