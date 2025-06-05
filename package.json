@@ -43,5 +43,8 @@
   "bugs": {
     "url": "https://github.com/aipng/vuetify-datagrid/issues"
   },
-  "homepage": "https://github.com/aipng/vuetify-datagrid#readme"
+  "homepage": "https://github.com/aipng/vuetify-datagrid#readme",
+  "publishConfig": {
+    "access": "public"
+  }
 }
