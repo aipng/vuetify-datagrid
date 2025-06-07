@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.4](https://github.com/aipng/vuetify-datagrid/compare/v1.0.3...v1.0.4) (2025-06-07)
+
+
+### Continuous Integration
+
+* remove package.json versioning - handled by standard-version ([ffb4f55](https://github.com/aipng/vuetify-datagrid/commit/ffb4f555272c63ab49a6d8e759a79f8b38e2df2b))
+
 ### [1.0.3](https://github.com/aipng/vuetify-datagrid/compare/v1.0.2...v1.0.3) (2025-06-07)
 
 
