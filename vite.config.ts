@@ -1,9 +1,22 @@
 import path from 'path'
 import vue from '@vitejs/plugin-vue'
 import { defineConfig } from 'vite'
+import dts from 'vite-plugin-dts'
 
 export default defineConfig({
-  plugins: [vue()],
+  plugins: [
+    vue({
+      template: {
+        compilerOptions: {
+          isCustomElement: (tag) => tag.startsWith('v-')
+        }
+      }
+    }),
+    dts({
+      include: ['src/**/*.vue', 'src/**/*.ts'],
+      outDir: 'dist'
+    })
+  ],
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src')
@@ -13,8 +26,7 @@ export default defineConfig({
     lib: {
       entry: path.resolve(__dirname, 'src/index.ts'),
       name: 'TheDatagrid',
-      fileName: 'index',
-      formats: ['es', 'umd']
+      fileName: (format) => `index.${format}.js`
     },
     rollupOptions: {
       external: ['vue', 'vuetify'],
@@ -23,7 +35,11 @@ export default defineConfig({
           vue: 'Vue',
           vuetify: 'Vuetify'
         },
-        exports: 'named'
+        exports: 'named',
+        assetFileNames: (assetInfo) => {
+          if (assetInfo.name === 'style.css') return 'vuetify-datagrid.css'
+          return assetInfo.name
+        }
       }
     },
     sourcemap: true
