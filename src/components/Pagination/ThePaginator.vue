@@ -1,5 +1,5 @@
 <template>
-	<div class="d-md-flex align-center justify-md-space-between w-lg-66 mx-auto text-center">
+	<div class="paginator d-md-flex align-center justify-md-space-between w-lg-66 mx-auto text-center">
 		<div class="my-4 my-md-0">
 			<strong>{{ firstOnPage }} - {{ lastOnPage }} z {{ itemsTotal }}</strong>
 		</div>
@@ -34,7 +34,7 @@
 					height="40"
 					width="40"
 					:class="{
-						'highlight': pageNumber === cursor.page,
+						'selected-page': pageNumber === cursor.page,
 					}"
 					@click="goToPage(pageNumber)"
 				>
@@ -173,11 +173,3 @@
 		}
 	}
 </script>
-
-<style>
-	.highlight {
-		font-weight: bold;
-		background: grey;
-		color: white;
-	}
-</style>

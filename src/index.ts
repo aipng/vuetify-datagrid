@@ -1,3 +1,5 @@
+import '@/assets/datagrid.css'
+
 import TheDatagrid from './components/Datagrid/TheDatagrid.vue'
 
 import type { CursorPosition } from './components/Datagrid/CursorPosition'

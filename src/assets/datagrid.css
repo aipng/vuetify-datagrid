@@ -52,8 +52,6 @@
 	color: #0371c5 !important;
 }
 
-/* Specifický styl pro fixed-header, pokud základní nestačí */
-/* Vuetify často přidává vlastní pozadí pro fixed header, zkuste nejdřív bez !important */
 .datagrid-table.v-data-table--fixed-header > .v-table__wrapper > table > thead > tr > th {
 	background-color: #f5f5f5;
 }
@@ -64,4 +62,11 @@
 
 .datagrid-table .inactive:hover .disabled {
 	opacity: 1;
+}
+
+/** Paginator **/
+.paginator .selected-page {
+	font-weight: bold;
+	background: grey;
+	color: white;
 }
