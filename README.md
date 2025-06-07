@@ -21,8 +21,8 @@ npm install aipng/datagrid
   <TheDatagrid
     :headers="headers"
     :result="result"
-    v-model:sort-by="sortBy"
     :cursor="cursor"
+    :sort-by="sortBy"
     @onCursorChange="handleCursorChange"
     @onSortChange="handleSortChange"
   >
