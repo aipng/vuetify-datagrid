@@ -43,8 +43,8 @@
 	import { computed } from 'vue'
 	import { mdiOrderAlphabeticalAscending, mdiOrderAlphabeticalDescending } from '@mdi/js'
 	import type { DataTableSortItem } from 'vuetify'
+	import type { DatagridColumnHeader } from '@/components/Datagrid/Header/DatagridColumnHeader'
 
-	import type { DatagridColumnHeader } from './DatagridColumnHeader'
 
 	const props = defineProps<{
 		column: DatagridColumnHeader,
