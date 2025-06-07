@@ -8,6 +8,8 @@
 </template>
 
 <script setup lang="ts">
+	import { VCheckboxBtn } from 'vuetify/components'
+
 	defineProps<{
 		value: unknown,
 	}>()

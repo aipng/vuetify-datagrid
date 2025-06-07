@@ -79,11 +79,13 @@
 <script setup lang="ts">
 	import { computed, ref, watch } from 'vue'
 	import { mdiChevronLeft, mdiChevronRight, mdiPageFirst, mdiPageLast } from '@mdi/js'
+	import { VBtn, VBtnGroup, VSelect } from 'vuetify/components'
 
 	type Cursor = {
 		page: number
 		pageSize: number
 	}
+
 
 	const {
 		cursor,
@@ -98,6 +100,7 @@
 	const emit = defineEmits<{
 		change: [cursor: Cursor],
 	}>()
+
 
 	const itemsPerPage = ref(cursor.pageSize)
 	const totalPages = computed(() => Math.ceil(itemsTotal / cursor.pageSize))

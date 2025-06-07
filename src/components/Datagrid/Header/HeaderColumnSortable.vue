@@ -42,6 +42,8 @@
 <script setup lang="ts">
 	import { computed } from 'vue'
 	import { mdiOrderAlphabeticalAscending, mdiOrderAlphabeticalDescending } from '@mdi/js'
+	import { VIcon } from 'vuetify/components'
+
 	import type { DataTableSortItem } from 'vuetify'
 	import type { DatagridColumnHeader } from '@/components/Datagrid/Header/DatagridColumnHeader'
 
@@ -54,6 +56,7 @@
 	const emit = defineEmits<{
 		change: [params: DataTableSortItem],
 	}>()
+
 
 	const isCentered = computed(() => {
 		return props.column.key === 'id' || props.column.align === 'center'

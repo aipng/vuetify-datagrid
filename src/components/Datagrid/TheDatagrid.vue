@@ -137,6 +137,7 @@
 
 <script setup lang="ts" generic="TItem extends { [key: string]: any }">
 	import { computed } from 'vue'
+	import { VDataTableServer, VCheckboxBtn } from 'vuetify/components'
 
 	import type { CursorPosition } from '@/components/Datagrid/CursorPosition'
 	import type { DatagridColumnHeader } from '@/components/Datagrid/Header/DatagridColumnHeader'
@@ -154,6 +155,7 @@
 		items: TItem[],
 	}
 
+
 	const {
 		headers,
 		result,
@@ -170,6 +172,7 @@
 		onCursorChange: [position: CursorPosition],
 		onSortChange: [item: SortItem],
 	}>()
+
 
 	const selectedItems = defineModel('selectedItems', { default: [] })
 	const cursor = defineModel<CursorPosition>('cursor', { required: true })
