@@ -159,11 +159,18 @@
 	const {
 		headers,
 		result,
+		cursor,
+		sortBy = {
+			sort: 'id',
+			order: 'desc',
+		},
 		showSelect = false,
 		showExpand = false,
 	} = defineProps<{
 		headers: DatagridColumnHeader[],
 		result: DataResult,
+		cursor: CursorPosition,
+		sortBy: SortItem,
 		showSelect?: boolean
 		showExpand?: boolean
 	}>()
@@ -175,18 +182,11 @@
 
 
 	const selectedItems = defineModel('selectedItems', { default: [] })
-	const cursor = defineModel<CursorPosition>('cursor', { required: true })
-	const sortBy = defineModel<SortItem>('sortBy', {
-		default: {
-			sort: 'id',
-			order: 'desc',
-		},
-	})
 
 	const nativeSortBy = computed(() => {
 		return [{
-			key: sortBy.value.sort,
-			order: sortBy.value.order,
+			key: sortBy.sort,
+			order: sortBy.order,
 		}]
 	})
 
