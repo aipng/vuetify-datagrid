@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.3](https://github.com/aipng/vuetify-datagrid/compare/v1.0.2...v1.0.3) (2025-06-07)
+
+
+### Continuous Integration
+
+* fix branch name ([95c9c76](https://github.com/aipng/vuetify-datagrid/commit/95c9c76b62128975bf0ff3db34e8374a99ff6728))
+* fix publish action ([3de5782](https://github.com/aipng/vuetify-datagrid/commit/3de57827a0d8f3ddb73e59ed181b853fc1e95270))
+
+
+### Documentation
+
+* sortBy is regular prop ([1ad6a63](https://github.com/aipng/vuetify-datagrid/commit/1ad6a6359ab11c5e0440ef4ab69bffedc5307c0a))
+
 ### 1.0.2 (2025-06-07)
 
 
